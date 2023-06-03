@@ -56,10 +56,10 @@ app.get("/post/:topic", function (req, res) {
 
   posts.forEach(function (post) {
     if (_.kebabCase(post.title) === _.kebabCase(req.params.topic)) {
-     res.render("post", {
-      title: post.title,
-      content: post.content
-     });
+      res.render("post", {
+        title: post.title,
+        content: post.content
+      });
     }
   });
 });
